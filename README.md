@@ -1,116 +1,68 @@
-# AegisOrbit
+# Aegis Orbit
 
-AegisOrbit is a research prototype for satellite conjunction simulations using
-Soft Actor-Critic (SAC), Clohessy-Wiltshire relative dynamics, optional J2/drag
-perturbations, and a control-barrier-function (CBF) action filter.
+Aegis Orbit is a research project with two parts: a verified conjunction screening ledger for ESA collision-avoidance data, and a documented simulator study of a control-barrier shield.
 
-## Repository layout
+This is research code. It is not a collision probability model, is not validated against real outcomes, and is not an operational avoidance screen or a removal design.
 
-| Path | Description |
+## 1. Screening ledger
+
+The ledger ranks ESA Collision Avoidance Challenge conjunction events by miss distance.
+
+- Keeps CDM rows with `time_to_tca` in [1, 3] days (inclusive).
+- Produces one row per event, taken from the latest CDM inside the window.
+- Ranks events by ascending `miss_distance_m`, with `event_id` as tie-break. Ranks are 1-based.
+
+Verified numbers from recorded runs:
+
+| Measure | Value |
 |---|---|
-| `ledger/` | Screening ledger for ESA CDM conjunction events (see [ledger/README.md](ledger/README.md)) |
-| `aegis_orbit/`, `planning/`, `benchmarks/`, `configs/`, `scripts/` | Simulator and shield feasibility work (see [docs/shield_comparison.md](docs/shield_comparison.md) and [docs/unshielded_baseline.md](docs/unshielded_baseline.md)) |
-| `results/` | Historical research outputs; referenced by docs and benchmarks, so do not move |
-| `docs/` | Research record and rules; `docs/cleanup/` holds internal audit files |
-| `tests/` | Pytest suite |
-| `data/` | Local external data, not tracked (see [ledger/README.md](ledger/README.md)) |
+| Archive rows | 162,634 |
+| Distinct event_id values | 13,154 |
+| Events with a row in [1, 3] days | 9,890 |
+| Rows in [1, 3] days | 48,383 |
+| Ranked events in export | 9,890 |
+| Duplicate event_id values in export | 0 |
+| Loader failures | 0 |
 
-## Research Status
+Baseline check: 1,051 positions differ between the ledger and a plain miss-distance sort. All of them have equal `miss_distance_m`, so the differences are tie-order only. This is a consistency check, not a performance claim.
 
-This code is for controlled numerical experiments, not operational flight use.
-The CBF filter can project actions only when its barrier halfspace intersects
-the configured actuator box. Infeasible steps use a heuristic backup that has
-no safety proof. In the simulator results, shield decisions were infeasible
-for the original geometry; the shield therefore did not demonstrate safe
-operation in that setting. Baseline and shield results are simulator results,
-not evidence of real-world performance. Detailed root-cause reports are local
-analysis artifacts under `results/` and are not included in a public source
-clone.
+Second-signal comparison: ranking the same 9,890 events by `relative_speed_mps` gives a top-20 overlap of 0 and a top-100 overlap of 1 with the miss-distance ranking. This is descriptive only; neither ordering is claimed to be better.
 
-The physical `sigma_miss` estimate and derived safe radius remain unresolved
-placeholders. The official configuration keeps `sigma_miss_m` null, and
-exploratory `d_safe` values are not accepted physical safety thresholds. Drag
-comparisons requiring unsourced ballistic coefficients are not included.
-The configuration under
-`configs/experiments/sigma_shield_sensitivity/experiment.json` is an
-exploratory simulator sensitivity specification, not an official configuration
-or a validated safety setting.
+### Limits
 
-## Installation
+- The archive is the unfiltered training set, not the competition test set.
+- No comparison has been made to ground truth or to the competition's risk score.
+- The data's redistribution terms are not confirmed beyond the competition's release, so the archive is not included here.
 
-Python 3.10 or newer is required.
+### Reproduce
+
+Place the archive at `data/external/esa_cdm/train_data.zip`, obtained from the competition Data page. Then:
 
 ```powershell
-python -m venv .venv
-.\.venv\Scripts\Activate.ps1
 python -m pip install -r requirements-dev.txt
-python -m pip install -e .
-```
-
-## Tests
-
-Run the fast suite:
-
-```powershell
+python -m ledger.export --out ledger_output/ranked_events.csv
 python -m pytest -m "not slow" -q
 ```
 
-Run tests marked slow separately:
+See `ledger/README.md` for details. Citation: Uriot et al., 2020, arXiv:2008.03069.
 
-```powershell
-python -m pytest -m slow -q
-```
+## 2. Shield feasibility study
 
-`tests/test_launch_script.ps1` is a separate Windows PowerShell test; pytest
-does not run it. It checks that the retraining launcher refuses a non-empty
-output directory. Run it from the repository root after creating the
-installation above:
+The `aegis_orbit/` package contains an orbital relative-motion simulator, a soft actor-critic agent, and a control-barrier-function action filter. The study found that the shield was infeasible in every shield-on episode, so it did not demonstrate safe operation in the tested setting. Results are simulator results only. See `docs/shield_comparison.md` and `docs/unshielded_baseline.md`.
 
-```powershell
-powershell -NoProfile -ExecutionPolicy Bypass -File tests\test_launch_script.ps1
-```
+The physical `sigma_miss` estimate and derived safe radius remain unresolved placeholders.
 
-## Example Commands
+## Repository layout
 
-The perturbation sensitivity command requires an output directory and refuses
-to overwrite existing artifacts:
-
-```powershell
-python -m benchmarks.perturbation_sensitivity --output-dir "$env:TEMP\aegis-orbit-perturbation"
-```
-
-The main benchmark can train/evaluate policies and write results to the
-specified output directory. Use a separate temporary configuration/output
-directory for diagnostic runs; do not point exploratory runs at historical
-result folders.
-
-```powershell
-python -m benchmarks.run_unshielded_benchmark --config <temporary-config.yaml> --output-dir <temporary-output-folder>
-```
-
-The PowerShell launchers also require an explicit `-OutputDir`. Choose a
-dedicated path such as `results\my-run`; these generated outputs are ignored
-by Git and are not part of the public release. The shield-comparison launcher
-uses `results\rerun_primary_20261014\policies` as its default policy input,
-which is not included in a public clone, so provide an available `-PolicyDir`
-when using it.
-
-## Reproducibility and Included Data
-
-The repository includes the trained actor checkpoints (`*.pt`), historical
-result tables/logs under `results/`, and the separately obtained ESA/Kelvins
-archive under `data/external/esa_cdm/`. Install Git LFS before cloning so the
-large result files and dataset archive are retrieved; otherwise, Git LFS
-pointer files may be checked out in their place. The archive remains subject
-to its upstream terms and is not covered by this repository's MIT license.
-
-The included checkpoints and evaluation artifacts support reproducing
-historical numbers. Dataset investigations use the included archive. New runs
-write outputs that should be identified by their manifest, policy/config
-hashes, and seed ranges.
+| Path | Contents |
+|---|---|
+| `ledger/` | Screening ledger: loader, validation, window filter, ranking, export |
+| `aegis_orbit/`, `planning/`, `benchmarks/`, `configs/`, `scripts/` | Simulator and shield feasibility work |
+| `results/` | Historical research outputs referenced by the docs |
+| `docs/` | Research record and rules; `docs/cleanup/` holds internal audit files |
+| `tests/` | Pytest suite |
+| `data/` | Local external data, not tracked |
 
 ## License
 
-This repository is distributed under the MIT License; see [LICENSE](LICENSE).
-Before publishing, the copyright holder should confirm that all contributors
-have authority to license their contributions under these terms.
+MIT for this repository's code and documents (see `LICENSE`). The ESA archive is not covered by this license and is not included.
