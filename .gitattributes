@@ -1,0 +1,5 @@
+results/stability_log.csv filter=lfs diff=lfs merge=lfs -text
+results/rerun_primary_20261014/stability_log.csv filter=lfs diff=lfs merge=lfs -text
+results/shield_comparison_cw_vs_j2_20261014/shield_comparison_steps.csv filter=lfs diff=lfs merge=lfs -text
+results/shield_comparison_20261014/shield_comparison_steps.csv filter=lfs diff=lfs merge=lfs -text
+data/external/esa_cdm/train_data.zip filter=lfs diff=lfs merge=lfs -text

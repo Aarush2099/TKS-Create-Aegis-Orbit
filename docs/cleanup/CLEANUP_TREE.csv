@@ -1,0 +1,290 @@
+path,size_bytes,disposition
+.gitignore,181,release candidate
+.vscode/settings.json,52,release candidate
+CLEANUP_CLAIMS.csv,17137,release candidate
+CLEANUP_OUTPUTS.csv,2802,release candidate
+CLEANUP_REPORT.md,9736,release candidate
+CLEANUP_RESULTS_HASHES.csv,41760,release candidate
+CLEANUP_TREE.csv,30235,release candidate; self-inventory row
+LICENSE,1101,release candidate
+README.md,2900,release candidate
+aegis_orbit/__init__.py,93,release candidate
+aegis_orbit/agents/__init__.py,184,release candidate
+aegis_orbit/agents/networks.py,1816,release candidate
+aegis_orbit/agents/sac_agent.py,5165,release candidate
+aegis_orbit/envs/__init__.py,530,release candidate
+aegis_orbit/envs/continuous_conjunction.py,6658,release candidate
+aegis_orbit/envs/cw_relative_dynamics.py,3844,release candidate
+aegis_orbit/envs/perturbations/__init__.py,522,release candidate
+aegis_orbit/envs/perturbations/atmosphere.py,2025,release candidate
+aegis_orbit/envs/perturbations/drag_relative.py,3281,release candidate
+aegis_orbit/envs/perturbations/j2_relative.py,5006,release candidate
+aegis_orbit/envs/perturbed_conjunction.py,12565,release candidate
+aegis_orbit/shields/__init__.py,239,release candidate
+aegis_orbit/shields/backup_controller.py,1973,release candidate
+aegis_orbit/shields/cbf_shield.py,3483,release candidate
+aegis_orbit/utils/__init__.py,226,release candidate
+aegis_orbit/utils/orbital_math.py,811,release candidate
+aegis_orbit/utils/streaming_csv.py,1028,release candidate
+benchmarks/README.md,950,release candidate
+benchmarks/baselines.py,1463,release candidate
+benchmarks/check_gates.py,11474,release candidate
+benchmarks/check_safe_set.py,2201,release candidate
+benchmarks/check_shield_gates.py,9368,release candidate
+benchmarks/oracle_reference.py,10405,release candidate
+benchmarks/perturbation_sensitivity.py,4612,release candidate
+benchmarks/run_seed4_logging_rerun.py,11458,release candidate
+benchmarks/run_shield_comparison.py,27562,release candidate
+benchmarks/run_unshielded_benchmark.py,36522,release candidate
+benchmarks/shield_grid.py,3537,release candidate
+benchmarks/verify_policies.py,7873,release candidate
+configs/experiments/sigma_shield_sensitivity/experiment.json,1882,release candidate
+configs/sac_unshielded.yaml,3957,release candidate
+data/external/esa_cdm/train_data.zip,87718091,"excluded: dataset preserved, ignored from release"
+docs/claims_and_scope.md,1682,release candidate
+docs/environment_model.md,3671,release candidate
+docs/feasibility_survey_plan.md,1728,release candidate
+docs/implementation_notes.md,3147,release candidate
+docs/perturbation_models.md,10621,release candidate
+docs/results_cw_vs_j2.md,5113,release candidate
+docs/safety_model.md,5923,release candidate
+docs/shield_comparison.md,5234,release candidate
+docs/task1_sigma_request.md,1543,release candidate
+docs/unshielded_baseline.md,7031,release candidate
+pyproject.toml,98,release candidate
+requirements-dev.txt,48,release candidate
+requirements.txt,49,release candidate
+results/best_actor_seed0_p0.0.pt,286481,"excluded: results data preserved, ignored from release"
+results/cbf_root_cause_20261017/REPORT.md,11137,"excluded: results data preserved, ignored from release"
+results/cbf_root_cause_20261017/confidence_intervals.csv,880,"excluded: results data preserved, ignored from release"
+results/cbf_root_cause_20261017/episodes.csv,14800,"excluded: results data preserved, ignored from release"
+results/cbf_root_cause_20261017/final_run/confidence_intervals.csv,880,"excluded: results data preserved, ignored from release"
+results/cbf_root_cause_20261017/final_run/episodes.csv,15717,"excluded: results data preserved, ignored from release"
+results/cbf_root_cause_20261017/final_run/manifest.json,1379,"excluded: results data preserved, ignored from release"
+results/cbf_root_cause_20261017/final_run/steps.csv,56112,"excluded: results data preserved, ignored from release"
+results/cbf_root_cause_20261017/final_run/summary.csv,1293,"excluded: results data preserved, ignored from release"
+results/cbf_root_cause_20261017/manifest.json,1313,"excluded: results data preserved, ignored from release"
+results/cbf_root_cause_20261017/original_gains_recheck/manifest.json,3478,"excluded: results data preserved, ignored from release"
+results/cbf_root_cause_20261017/original_gains_recheck/shield_comparison.csv,15780,"excluded: results data preserved, ignored from release"
+results/cbf_root_cause_20261017/original_gains_recheck/shield_comparison_steps.csv,2889578,"excluded: results data preserved, ignored from release"
+results/cbf_root_cause_20261017/provenance.json,1740,"excluded: results data preserved, ignored from release"
+results/cbf_root_cause_20261017/steps.csv,55952,"excluded: results data preserved, ignored from release"
+results/cbf_root_cause_20261017/summary.csv,1290,"excluded: results data preserved, ignored from release"
+results/cbf_root_cause_20261017/verified_run/confidence_intervals.csv,880,"excluded: results data preserved, ignored from release"
+results/cbf_root_cause_20261017/verified_run/episodes.csv,14800,"excluded: results data preserved, ignored from release"
+results/cbf_root_cause_20261017/verified_run/manifest.json,1313,"excluded: results data preserved, ignored from release"
+results/cbf_root_cause_20261017/verified_run/steps.csv,55952,"excluded: results data preserved, ignored from release"
+results/cbf_root_cause_20261017/verified_run/summary.csv,1290,"excluded: results data preserved, ignored from release"
+results/checkpoint_selection.csv,13267,"excluded: results data preserved, ignored from release"
+results/original_scenario_feasibility_20261017/REPORT.md,12540,"excluded: results data preserved, ignored from release"
+results/original_scenario_feasibility_20261017/confidence_intervals.csv,379,"excluded: results data preserved, ignored from release"
+results/original_scenario_feasibility_20261017/manifest.json,2695,"excluded: results data preserved, ignored from release"
+results/original_scenario_feasibility_20261017/matched_d40_seed0_20/manifest.json,2900,"excluded: results data preserved, ignored from release"
+results/original_scenario_feasibility_20261017/matched_d40_seed0_20/shield_comparison.csv,12761,"excluded: results data preserved, ignored from release"
+results/original_scenario_feasibility_20261017/matched_d40_seed0_20/shield_comparison_steps.csv,2346211,"excluded: results data preserved, ignored from release"
+results/original_scenario_feasibility_20261017/provenance.json,3073,"excluded: results data preserved, ignored from release"
+results/original_scenario_feasibility_20261017/scenario_state_comparison.csv,1996,"excluded: results data preserved, ignored from release"
+results/original_scenario_feasibility_20261017/summary.csv,768,"excluded: results data preserved, ignored from release"
+results/original_scenario_feasibility_20261017/trace_seed0_eval10000/key_states.csv,1956,"excluded: results data preserved, ignored from release"
+results/original_scenario_feasibility_20261017/trace_seed0_eval10000/manifest.json,1081,"excluded: results data preserved, ignored from release"
+results/original_scenario_feasibility_20261017/trace_seed0_eval10000/step_trace.csv,409520,"excluded: results data preserved, ignored from release"
+results/original_scenario_feasibility_20261017/trace_seed0_eval10000_full_terms/key_states.csv,2257,"excluded: results data preserved, ignored from release"
+results/original_scenario_feasibility_20261017/trace_seed0_eval10000_full_terms/manifest.json,1081,"excluded: results data preserved, ignored from release"
+results/original_scenario_feasibility_20261017/trace_seed0_eval10000_full_terms/step_trace.csv,466959,"excluded: results data preserved, ignored from release"
+results/original_scenario_feasibility_20261017/trace_seed0_eval10005/key_states.csv,2262,"excluded: results data preserved, ignored from release"
+results/original_scenario_feasibility_20261017/trace_seed0_eval10005/manifest.json,1082,"excluded: results data preserved, ignored from release"
+results/original_scenario_feasibility_20261017/trace_seed0_eval10005/step_trace.csv,466822,"excluded: results data preserved, ignored from release"
+results/original_scenario_feasibility_20261017/trace_seed0_eval10010/key_states.csv,2266,"excluded: results data preserved, ignored from release"
+results/original_scenario_feasibility_20261017/trace_seed0_eval10010/manifest.json,1085,"excluded: results data preserved, ignored from release"
+results/original_scenario_feasibility_20261017/trace_seed0_eval10010/step_trace.csv,466989,"excluded: results data preserved, ignored from release"
+results/original_scenario_feasibility_20261017/trace_seed0_eval10015/key_states.csv,2262,"excluded: results data preserved, ignored from release"
+results/original_scenario_feasibility_20261017/trace_seed0_eval10015/manifest.json,1079,"excluded: results data preserved, ignored from release"
+results/original_scenario_feasibility_20261017/trace_seed0_eval10015/step_trace.csv,466800,"excluded: results data preserved, ignored from release"
+results/original_scenario_feasibility_20261017/trace_seed0_eval10019/key_states.csv,2258,"excluded: results data preserved, ignored from release"
+results/original_scenario_feasibility_20261017/trace_seed0_eval10019/manifest.json,1081,"excluded: results data preserved, ignored from release"
+results/original_scenario_feasibility_20261017/trace_seed0_eval10019/step_trace.csv,466579,"excluded: results data preserved, ignored from release"
+results/rerun_primary_20261013/run.log,10728,"excluded: results data preserved, ignored from release"
+results/rerun_primary_20261013/run.log.err,0,"excluded: results data preserved, ignored from release"
+results/rerun_primary_20261014/checkpoint_selection.csv,4413,"excluded: results data preserved, ignored from release"
+results/rerun_primary_20261014/launch.json,571,"excluded: results data preserved, ignored from release"
+results/rerun_primary_20261014/pid.txt,5,"excluded: results data preserved, ignored from release"
+results/rerun_primary_20261014/policies/index.csv,2782,"excluded: results data preserved, ignored from release"
+results/rerun_primary_20261014/policies/sac_primary_seed0_step10000.json,271,"excluded: results data preserved, ignored from release"
+results/rerun_primary_20261014/policies/sac_primary_seed0_step10000.pt,286629,"excluded: results data preserved, ignored from release"
+results/rerun_primary_20261014/policies/sac_primary_seed0_step40000.json,269,"excluded: results data preserved, ignored from release"
+results/rerun_primary_20261014/policies/sac_primary_seed0_step40000.pt,286629,"excluded: results data preserved, ignored from release"
+results/rerun_primary_20261014/policies/sac_primary_seed0_step50000.json,269,"excluded: results data preserved, ignored from release"
+results/rerun_primary_20261014/policies/sac_primary_seed0_step50000.pt,286629,"excluded: results data preserved, ignored from release"
+results/rerun_primary_20261014/policies/sac_primary_seed1_step10000.json,270,"excluded: results data preserved, ignored from release"
+results/rerun_primary_20261014/policies/sac_primary_seed1_step10000.pt,286629,"excluded: results data preserved, ignored from release"
+results/rerun_primary_20261014/policies/sac_primary_seed1_step20000.json,270,"excluded: results data preserved, ignored from release"
+results/rerun_primary_20261014/policies/sac_primary_seed1_step20000.pt,286629,"excluded: results data preserved, ignored from release"
+results/rerun_primary_20261014/policies/sac_primary_seed2_step10000.json,271,"excluded: results data preserved, ignored from release"
+results/rerun_primary_20261014/policies/sac_primary_seed2_step10000.pt,286629,"excluded: results data preserved, ignored from release"
+results/rerun_primary_20261014/policies/sac_primary_seed2_step20000.json,270,"excluded: results data preserved, ignored from release"
+results/rerun_primary_20261014/policies/sac_primary_seed2_step20000.pt,286629,"excluded: results data preserved, ignored from release"
+results/rerun_primary_20261014/policies/sac_primary_seed2_step30000.json,269,"excluded: results data preserved, ignored from release"
+results/rerun_primary_20261014/policies/sac_primary_seed2_step30000.pt,286629,"excluded: results data preserved, ignored from release"
+results/rerun_primary_20261014/policies/sac_primary_seed3_step10000.json,270,"excluded: results data preserved, ignored from release"
+results/rerun_primary_20261014/policies/sac_primary_seed3_step10000.pt,286629,"excluded: results data preserved, ignored from release"
+results/rerun_primary_20261014/policies/sac_primary_seed3_step100000.json,270,"excluded: results data preserved, ignored from release"
+results/rerun_primary_20261014/policies/sac_primary_seed3_step100000.pt,286643,"excluded: results data preserved, ignored from release"
+results/rerun_primary_20261014/policies/sac_primary_seed3_step110000.json,270,"excluded: results data preserved, ignored from release"
+results/rerun_primary_20261014/policies/sac_primary_seed3_step110000.pt,286643,"excluded: results data preserved, ignored from release"
+results/rerun_primary_20261014/policies/sac_primary_seed3_step30000.json,268,"excluded: results data preserved, ignored from release"
+results/rerun_primary_20261014/policies/sac_primary_seed3_step30000.pt,286629,"excluded: results data preserved, ignored from release"
+results/rerun_primary_20261014/policies/sac_primary_seed3_step80000.json,269,"excluded: results data preserved, ignored from release"
+results/rerun_primary_20261014/policies/sac_primary_seed3_step80000.pt,286629,"excluded: results data preserved, ignored from release"
+results/rerun_primary_20261014/policies/sac_primary_seed3_step90000.json,269,"excluded: results data preserved, ignored from release"
+results/rerun_primary_20261014/policies/sac_primary_seed3_step90000.pt,286629,"excluded: results data preserved, ignored from release"
+results/rerun_primary_20261014/policies/sac_primary_seed4_step10000.json,271,"excluded: results data preserved, ignored from release"
+results/rerun_primary_20261014/policies/sac_primary_seed4_step10000.pt,286629,"excluded: results data preserved, ignored from release"
+results/rerun_primary_20261014/policies/sac_primary_seed4_step170000.json,270,"excluded: results data preserved, ignored from release"
+results/rerun_primary_20261014/policies/sac_primary_seed4_step170000.pt,286643,"excluded: results data preserved, ignored from release"
+results/rerun_primary_20261014/policies/sac_primary_seed4_step180000.json,271,"excluded: results data preserved, ignored from release"
+results/rerun_primary_20261014/policies/sac_primary_seed4_step180000.pt,286643,"excluded: results data preserved, ignored from release"
+results/rerun_primary_20261014/policies/sac_primary_seed4_step190000.json,268,"excluded: results data preserved, ignored from release"
+results/rerun_primary_20261014/policies/sac_primary_seed4_step190000.pt,286643,"excluded: results data preserved, ignored from release"
+results/rerun_primary_20261014/policies/sac_primary_seed4_step70000.json,271,"excluded: results data preserved, ignored from release"
+results/rerun_primary_20261014/policies/sac_primary_seed4_step70000.pt,286629,"excluded: results data preserved, ignored from release"
+results/rerun_primary_20261014/run.log,75375,"excluded: results data preserved, ignored from release"
+results/rerun_primary_20261014/run.log.err,0,"excluded: results data preserved, ignored from release"
+results/rerun_primary_20261014/run_manifest.json,438,"excluded: results data preserved, ignored from release"
+results/rerun_primary_20261014/stability_log.csv,128702034,"excluded: results data preserved, ignored from release"
+results/rerun_primary_20261014/training_log.csv,187611,"excluded: results data preserved, ignored from release"
+results/rerun_primary_20261014/unshielded_benchmark.csv,109151,"excluded: results data preserved, ignored from release"
+results/run_manifest.json,322,"excluded: results data preserved, ignored from release"
+results/seed4_logging_rerun_20261016/checkpoint_selection.csv,940,"excluded: results data preserved, ignored from release"
+results/seed4_logging_rerun_20261016/episode_diagnostics.csv,53573,"excluded: results data preserved, ignored from release"
+results/seed4_logging_rerun_20261016/instrumentation_parity_verification.json,642,"excluded: results data preserved, ignored from release"
+results/seed4_logging_rerun_20261016/launch.json,1073,"excluded: results data preserved, ignored from release"
+results/seed4_logging_rerun_20261016/launch_attempt1.json,939,"excluded: results data preserved, ignored from release"
+results/seed4_logging_rerun_20261016/launch_observation.json,450,"excluded: results data preserved, ignored from release"
+results/seed4_logging_rerun_20261016/launcher_attempt1.err,962,"excluded: results data preserved, ignored from release"
+results/seed4_logging_rerun_20261016/pid.txt,5,"excluded: results data preserved, ignored from release"
+results/seed4_logging_rerun_20261016/pid_attempt1.txt,5,"excluded: results data preserved, ignored from release"
+results/seed4_logging_rerun_20261016/policies/index.csv,797,"excluded: results data preserved, ignored from release"
+results/seed4_logging_rerun_20261016/policies/sac_primary_seed4_step10000.json,271,"excluded: results data preserved, ignored from release"
+results/seed4_logging_rerun_20261016/policies/sac_primary_seed4_step10000.pt,286629,"excluded: results data preserved, ignored from release"
+results/seed4_logging_rerun_20261016/policies/sac_primary_seed4_step170000.json,270,"excluded: results data preserved, ignored from release"
+results/seed4_logging_rerun_20261016/policies/sac_primary_seed4_step170000.pt,286643,"excluded: results data preserved, ignored from release"
+results/seed4_logging_rerun_20261016/policies/sac_primary_seed4_step180000.json,271,"excluded: results data preserved, ignored from release"
+results/seed4_logging_rerun_20261016/policies/sac_primary_seed4_step180000.pt,286643,"excluded: results data preserved, ignored from release"
+results/seed4_logging_rerun_20261016/policies/sac_primary_seed4_step190000.json,268,"excluded: results data preserved, ignored from release"
+results/seed4_logging_rerun_20261016/policies/sac_primary_seed4_step190000.pt,286643,"excluded: results data preserved, ignored from release"
+results/seed4_logging_rerun_20261016/policies/sac_primary_seed4_step70000.json,271,"excluded: results data preserved, ignored from release"
+results/seed4_logging_rerun_20261016/policies/sac_primary_seed4_step70000.pt,286629,"excluded: results data preserved, ignored from release"
+results/seed4_logging_rerun_20261016/run.log,110984,"excluded: results data preserved, ignored from release"
+results/seed4_logging_rerun_20261016/run.log.err,0,"excluded: results data preserved, ignored from release"
+results/seed4_logging_rerun_20261016/seed4_30k_60k_collided_episode_offsets_and_substeps.csv,20727,"excluded: results data preserved, ignored from release"
+results/seed4_logging_rerun_20261016/seed4_30k_60k_offset_bands.csv,136,"excluded: results data preserved, ignored from release"
+results/seed4_logging_rerun_20261016/training_log.csv,68405,"excluded: results data preserved, ignored from release"
+results/seed4_logging_rerun_20261016/validation_report.json,1117,"excluded: results data preserved, ignored from release"
+results/seed4_logging_rerun_20261016/window_count_verification.csv,719,"excluded: results data preserved, ignored from release"
+results/shield_comparison_20261014/launch.json,1082,"excluded: results data preserved, ignored from release"
+results/shield_comparison_20261014/manifest.json,2120,"excluded: results data preserved, ignored from release"
+results/shield_comparison_20261014/pid.txt,5,"excluded: results data preserved, ignored from release"
+results/shield_comparison_20261014/run.log,70207,"excluded: results data preserved, ignored from release"
+results/shield_comparison_20261014/run.log.err,0,"excluded: results data preserved, ignored from release"
+results/shield_comparison_20261014/shield_comparison.csv,610435,"excluded: results data preserved, ignored from release"
+results/shield_comparison_20261014/shield_comparison_steps.csv,79763482,"excluded: results data preserved, ignored from release"
+results/shield_comparison_20261014/tables.md,2068,"excluded: results data preserved, ignored from release"
+results/shield_comparison_cw_vs_j2_20261014/RESULTS_HASHES.txt,555,"excluded: results data preserved, ignored from release"
+results/shield_comparison_cw_vs_j2_20261014/launch.json,1145,"excluded: results data preserved, ignored from release"
+results/shield_comparison_cw_vs_j2_20261014/manifest.json,4260,"excluded: results data preserved, ignored from release"
+results/shield_comparison_cw_vs_j2_20261014/pid.txt,5,"excluded: results data preserved, ignored from release"
+results/shield_comparison_cw_vs_j2_20261014/run.log,145302,"excluded: results data preserved, ignored from release"
+results/shield_comparison_cw_vs_j2_20261014/run.log.err,0,"excluded: results data preserved, ignored from release"
+results/shield_comparison_cw_vs_j2_20261014/shield_comparison.csv,1226434,"excluded: results data preserved, ignored from release"
+results/shield_comparison_cw_vs_j2_20261014/shield_comparison_steps.csv,230924354,"excluded: results data preserved, ignored from release"
+results/shield_comparison_cw_vs_j2_20261014/tables.md,3070,"excluded: results data preserved, ignored from release"
+results/shield_feasibility_pilot_20261016/REPORT.md,4610,"excluded: results data preserved, ignored from release"
+results/shield_feasibility_pilot_20261016/manifest.json,3481,"excluded: results data preserved, ignored from release"
+results/shield_feasibility_pilot_20261016/shield_comparison.csv,61861,"excluded: results data preserved, ignored from release"
+results/shield_feasibility_pilot_20261016/shield_comparison_steps.csv,11559296,"excluded: results data preserved, ignored from release"
+results/shield_gain_feasibility_pilot_20261016_alpha003/REPORT.md,3515,"excluded: results data preserved, ignored from release"
+results/shield_gain_feasibility_pilot_20261016_alpha003/manifest.json,3485,"excluded: results data preserved, ignored from release"
+results/shield_gain_feasibility_pilot_20261016_alpha003/shield_comparison.csv,58238,"excluded: results data preserved, ignored from release"
+results/shield_gain_feasibility_pilot_20261016_alpha003/shield_comparison_steps.csv,98,"excluded: results data preserved, ignored from release"
+results/shield_grid_20261014/shield_grid.csv,472,"excluded: results data preserved, ignored from release"
+results/sigma_miss_shield_sweep_20261017/REPORT.md,16281,"excluded: results data preserved, ignored from release"
+results/sigma_miss_shield_sweep_20261017/baseline.csv,5530,"excluded: results data preserved, ignored from release"
+results/sigma_miss_shield_sweep_20261017/baseline_manifest.json,1111,"excluded: results data preserved, ignored from release"
+results/sigma_miss_shield_sweep_20261017/confidence_intervals.csv,10036,"excluded: results data preserved, ignored from release"
+results/sigma_miss_shield_sweep_20261017/experiment_overrides.json,1897,"excluded: results data preserved, ignored from release"
+results/sigma_miss_shield_sweep_20261017/paired_bootstrap.csv,1142,"excluded: results data preserved, ignored from release"
+results/sigma_miss_shield_sweep_20261017/provenance.json,1363,"excluded: results data preserved, ignored from release"
+results/sigma_miss_shield_sweep_20261017/reproduction_check/baseline.csv,5463,"excluded: results data preserved, ignored from release"
+results/sigma_miss_shield_sweep_20261017/reproduction_check/baseline_manifest.json,1043,"excluded: results data preserved, ignored from release"
+results/sigma_miss_shield_sweep_20261017/reproduction_check_exact/baseline.csv,5530,"excluded: results data preserved, ignored from release"
+results/sigma_miss_shield_sweep_20261017/reproduction_check_exact/baseline_manifest.json,1044,"excluded: results data preserved, ignored from release"
+results/sigma_miss_shield_sweep_20261017/sigma_screen.csv,994,"excluded: results data preserved, ignored from release"
+results/sigma_miss_shield_sweep_20261017/summary.csv,5097,"excluded: results data preserved, ignored from release"
+results/stability_log.csv,383060810,"excluded: results data preserved, ignored from release"
+results/step2c_full_run.log,219611,"excluded: results data preserved, ignored from release"
+results/step2c_full_run.log.err,0,"excluded: results data preserved, ignored from release"
+results/superseded/20261011_143208/perturbation_sensitivity.csv,1254,"excluded: results data preserved, ignored from release"
+results/superseded/20261011_143208/perturbation_sensitivity.png,6151,"excluded: results data preserved, ignored from release"
+results/task1_sigma_investigation_20261016/REPORT.md,8870,"excluded: results data preserved, ignored from release"
+results/training_gap_diagnostic_20261016/REPORT.md,21230,"excluded: results data preserved, ignored from release"
+results/training_gap_diagnostic_20261016/analyze_stability_window.py,5733,"excluded: results data preserved, ignored from release"
+results/training_gap_diagnostic_20261016/analyze_steps34.py,14446,"excluded: results data preserved, ignored from release"
+results/training_gap_diagnostic_20261016/attribution_table.csv,5408,"excluded: results data preserved, ignored from release"
+results/training_gap_diagnostic_20261016/check_seed4_late_window.py,14345,"excluded: results data preserved, ignored from release"
+results/training_gap_diagnostic_20261016/check_training_windows_offsets.py,9527,"excluded: results data preserved, ignored from release"
+results/training_gap_diagnostic_20261016/checkpoint_manifest.csv,1117,"excluded: results data preserved, ignored from release"
+results/training_gap_diagnostic_20261016/condition_summary.csv,1297,"excluded: results data preserved, ignored from release"
+results/training_gap_diagnostic_20261016/episode_results.csv,429828,"excluded: results data preserved, ignored from release"
+results/training_gap_diagnostic_20261016/initial_state_distribution.csv,912,"excluded: results data preserved, ignored from release"
+results/training_gap_diagnostic_20261016/initial_state_samples.csv,203147,"excluded: results data preserved, ignored from release"
+results/training_gap_diagnostic_20261016/run_metadata.json,855,"excluded: results data preserved, ignored from release"
+results/training_gap_diagnostic_20261016/run_step2_diagnostic.py,15805,"excluded: results data preserved, ignored from release"
+results/training_gap_diagnostic_20261016/seed4_30k_60k_episode_details.csv,93819,"excluded: results data preserved, ignored from release"
+results/training_gap_diagnostic_20261016/seed4_late_checkpoint_evaluation.csv,34177,"excluded: results data preserved, ignored from release"
+results/training_gap_diagnostic_20261016/seed4_late_checkpoint_evaluation_verified.csv,67447,"excluded: results data preserved, ignored from release"
+results/training_gap_diagnostic_20261016/seed4_late_checkpoint_summary_verified.csv,563,"excluded: results data preserved, ignored from release"
+results/training_gap_diagnostic_20261016/seed4_training_windows.csv,2861,"excluded: results data preserved, ignored from release"
+results/training_gap_diagnostic_20261016/stability_20k_60k_summary.csv,40505,"excluded: results data preserved, ignored from release"
+results/training_gap_diagnostic_20261016/training_phase_counts.csv,2292,"excluded: results data preserved, ignored from release"
+results/training_gap_diagnostic_20261016/training_phase_rates.csv,4112,"excluded: results data preserved, ignored from release"
+results/training_gap_diagnostic_20261016/training_seed_windows_10k.csv,14987,"excluded: results data preserved, ignored from release"
+results/training_gap_diagnostic_20261016/training_step_quintiles.csv,6629,"excluded: results data preserved, ignored from release"
+results/training_log.csv,1121882,"excluded: results data preserved, ignored from release"
+results/unshielded_benchmark.csv,295506,"excluded: results data preserved, ignored from release"
+scripts/launch_retraining.ps1,3731,release candidate
+scripts/launch_shield_comparison.ps1,5258,release candidate
+scripts/register_retraining_task.ps1,1671,release candidate
+scripts/run_cbf_root_cause.py,19527,release candidate
+scripts/run_sigma_miss_baseline.py,6826,release candidate
+scripts/trace_original_scenario.py,10211,release candidate
+setup.py,434,release candidate
+tests/__init__.py,0,release candidate
+tests/test_atmosphere.py,3894,release candidate
+tests/test_backup_controller.py,1768,release candidate
+tests/test_cbf_shield.py,7423,release candidate
+tests/test_checkpoint_selection.py,3039,release candidate
+tests/test_config.py,831,release candidate
+tests/test_continuous_conjunction.py,5160,release candidate
+tests/test_cw_relative_dynamics.py,1182,release candidate
+tests/test_drag_relative.py,1496,release candidate
+tests/test_env_reference.py,1582,release candidate
+tests/test_environment_construction.py,404,release candidate
+tests/test_eval_determinism.py,991,release candidate
+tests/test_j2_relative.py,5422,release candidate
+tests/test_launch_script.ps1,1383,release candidate
+tests/test_logging.py,2862,release candidate
+tests/test_networks.py,469,release candidate
+tests/test_oracle_preflight.py,4737,release candidate
+tests/test_oracle_reference.py,1528,release candidate
+tests/test_orbital_math.py,292,release candidate
+tests/test_perturbed_conjunction.py,4122,release candidate
+tests/test_policy_saving.py,3909,release candidate
+tests/test_progress.py,835,release candidate
+tests/test_reward.py,1968,release candidate
+tests/test_runner_smoke.py,5896,release candidate
+tests/test_sac_agent.py,621,release candidate
+tests/test_shield_comparison.py,11405,release candidate
+tests/test_shield_grid.py,1355,release candidate
+tests/test_streaming_csv.py,1992,release candidate
+tests/test_summary_csv.py,1957,release candidate
+tests/test_verify_policies.py,3730,release candidate
